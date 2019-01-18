@@ -1,0 +1,21 @@
+.etched{
+
+    background-color:red;
+    /* width: auto; */
+    height: 70px;
+    /* display: flex; */
+    margin: 1px;
+    text-align: center;
+}
+
+.etchSpace{
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+}
+
+.etched:hover{
+
+    background-color: blue;
+}
