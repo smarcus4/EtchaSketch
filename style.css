@@ -9,7 +9,9 @@ html{
 
 
 
-
+.etched{
+    flex-shrink:1;
+}
 
 .etchSpace{
     display: grid;

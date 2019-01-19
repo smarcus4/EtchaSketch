@@ -54,8 +54,15 @@ function clearSpaces($etchSpace){
 function getUserInput(e){
 
     const spaces = prompt("Enter the Grid Size e.g. 16 for 16x16");
-    // clearSpaces($etchSpace);
-    resetGrid($etchSpace, spaces);
+
+    if(spaces<=2 || spaces>=120){
+        const spaces = prompt("Please enter an emount between 2 and 120 non inclusive")
+    }else{
+        clearSpaces($etchSpace);
+        resetGrid($etchSpace, spaces);
+
+    }
+    
 
 
 }
@@ -70,9 +77,9 @@ clearBtn.addEventListener("click", (e) =>{
 resetGrid($etchSpace);
 
 //mouseover
-const $newDiv = document.querySelectorAll(".etched");
-$newDiv.forEach($div => $div.addEventListener("mouseenter", function hoverOnDivs(e){
-
+// const $newDiv = document.querySelectorAll(".etched");
+// $newDiv.forEach($div => $div.addEventListener("mouseenter", function hoverOnDivs(e){
+$etchSpace.addEventListener("mouseover", (evt) => {
 
 
     function random_rgba() {
@@ -81,9 +88,13 @@ $newDiv.forEach($div => $div.addEventListener("mouseenter", function hoverOnDivs
     }
     
     const color = random_rgba();
-        $div.style.backgroundColor = color;
 
-}));
+    if (evt.target.classList.contains("etched")) {
+        const $div = evt.target
+        $div.style.backgroundColor = color;
+    }
+})
+// }));
 
 
 
