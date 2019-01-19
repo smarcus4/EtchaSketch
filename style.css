@@ -1,21 +1,30 @@
+html{
+    background-image: url("./etchbg.jpg");
+    background-repeat: no-repeat;
+    /* width: 1200px;
+    height:1300px; */
+    margin-left:300px;
+    padding:0;
+}
+
+
+
 .etched{
 
-    background-color:red;
-    /* width: auto; */
-    height: 70px;
-    /* display: flex; */
-    margin: 1px;
+    justify-items: center;
+    /* height: 50px; */
     text-align: center;
+    
 }
 
 .etchSpace{
     display: grid;
-    grid-template-columns: 70px 70px 70px 70px;
-    grid-column-gap: 1px;
-    grid-row-gap: 1px;
+    position: absolute;
+    z-index:1000;
+    margin-left: 114px;
+    margin-top: 100px;
+    width: 775px;
+    height: 537px;
+    
 }
 
-.etched:hover{
-
-    background-color: blue;
-}
